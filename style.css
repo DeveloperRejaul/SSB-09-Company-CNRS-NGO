@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+}
+.navbar-brand img {
+	position: absolute;
+	top: 2px;
+	left: auto;
+	z-index: 999;
+}
+.navbar-collapse.collapse.show {
+	padding-top: 50px;
+}
+.navbar-expand-lg .navbar-collapse {
+	justify-content: end;
+}
+.font-bold{
+    font-weight: bolder;
+}
+.clearfix::after{
+    content: " ";
+    display: block;
+    visibility: hidden;
+}
+.row.row-inner01{
+	padding: 0px 7px;
+}
+.prom-cl, .prom-bn{
+    height: 35px;
+    margin-top: 6px;
+}
+.bg-01{
+    background: url(./img/homeImage.jpg) no-repeat center center ;
+    height: 400px;
+}
+.bg-01 p{
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    height: 400px;
+}
+.bg-02{
+    background: url(./img/wetlands.jpg) no-repeat center center ;
+    background-size: cover;
+    transition: .5s;
+    border-radius: 10px;
+    width: 64%;
+    margin-right: 2%;
+    padding: 200px 0;
+}
+.bg-02:hover{
+    transform: scale(1.02);
+}
+.bg-03{
+    background: url(./img/sugarcaneMan.jpg) no-repeat center center ;
+    background-size: cover;
+    transition: .5s;
+    border-radius: 10px;
+    padding: 200px 0;
+}
+.bg-03:hover{
+    transform: scale(1.02);
+}
+.dmain-conten-01{
+    width: 100%;
+    height: auto;
+}
+.div-001 {
+    width: 20%;
+    height: auto;
+    position: relative;
+    float: left;
+    margin-right: 12px;
+    transition: .5s;
+}
+.div-001:hover{
+    transform: scale(1.07);
+}
+.div-002:hover{
+    transform: scale(1.03);
+}
+.div-002 {
+    width: 57.7%;
+    height: auto;
+    float: left;
+    position: relative;
+    transition: .5s;
+}
+.div-001 img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.div-002 img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.img-text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.img-text-01 {
+    position: absolute;
+    right: 25%;
+    bottom: 3px;
+}
+
+.box-img{
+    box-sizing: border-box;
+    height: 245px;
+    width: auto;
+    border-radius: 20px;
+    max-width: 100%;
+}
+.col-lg-2 {
+    width: 13.7%;
+    padding: 0;
+    margin-right: 5px;
+    transition: .4s;
+}
+.col-lg-2:hover{
+    transform: scale(1.04);
+}
+.row > .col-lg-2:nth-child(7){
+    margin-right: 0;
+}
+a.a-class{
+    color: white;
+    text-decoration: none;
+}
+.text-item a.a-class{
+    text-decoration: none;
+    color: #212529;
+}
+.section-03 .sec-col-03{
+    width: 30%;
+    height: 530px;
+    padding: 0;
+    position: relative;
+    transition: .4s;
+    float: left;
+}
+.section-03 .sec-col-04{
+    width: 70%;
+    height: 530px;
+    position: relative;
+    transition: .4s;
+    float: right;
+}
+.sec-col-04:hover{
+    transform: scale(1.03);
+}
+.sec-col-03:hover{
+    transform: scale(1.03);
+}
+.section-03 .sec-col-03 img{
+    width: max-content;
+    border-radius: 15px;
+}
+.section-03 .sec-col-04 img{
+    width: max-content;
+    border-radius: 15px;
+}
+.sec-col-03 .img-text{
+    left: 20%;
+    bottom: 25px;
+}
+.sec-col-04 .img-text{
+    margin-left: 63%;
+    margin-bottom: 25px;
+}
+.section-04, .section-05 .sec-04{
+    transition: .4s;
+}
+.section-04 .sec-04:hover, .section-05 .sec-04:hover{
+    transform: scale(1.01);
+}
+.section-06 img {
+    border-radius: 15px 30px 30px 15px;
+}
+.footer-section{
+    background-color: #bfbfbf;
+    padding: 30px;
+}
+.footer-section .container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.footer-section .container img{
+    width: 12%;
+    height: auto;
+}
+.p-address{
+    font-size: 14px;
+}
+.icon a{
+   color: black;
+   text-decoration: none;
+}
+.accordion {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  .active:after {
+    content: "\2212";
+  }
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .panel a:hover{
+    background-color: #f1f1f1;
+  }
+  .panel a{
+      color: black;
+  }
+  .p-2 {
+    display: block;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: rgb(255, 255, 255);
+}
+.navbar-light .navbar-nav .nav-link {
+	color: rgb(240, 231, 231);
+}
+.fa.fa-bars {
+	color: white;
+	font-size: 35px;
+	transition-property: color;
+	transition-duration: .5s;
+}
+.fa.fa-bars:hover {
+	color: #f88409;
+}
