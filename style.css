@@ -253,3 +253,35 @@ a.a-class{
 .fa.fa-bars:hover {
 	color: #f88409;
 }
+.section-03 .container .row.pt-3 {
+	padding-left: 10px;
+}
+.row.position-relative {
+	padding-left: 10px;
+}
+.div01 a i, .icon a {
+	transition-property: color;
+	transition-duration: .5s;
+}
+.div01 a i:hover, .icon a:hover {
+	color: #ff0078;
+}
+.main-item {
+	transition: .5s;
+}
+.main-item:hover {
+	transform: scale(1.02);
+}
+.footer-section p {
+	margin: 0;
+	padding-top: 33px;
+	font-size: 15px;
+	text-align: center;
+	color: #434343;
+}
+.footer-section {
+	padding-bottom: 5px;
+}
+.div02 a:nth-child(1) {
+	padding-left: 0 !important;
+}
