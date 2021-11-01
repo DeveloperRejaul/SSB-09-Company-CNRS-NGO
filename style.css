@@ -2,8 +2,24 @@
     margin: 0;
     padding: 0;
 }
+
+:root{
+    --body-color:#efefef;
+    --font-color:#000;
+    --footer-bg-color:#bfbfbf;
+    --icon-color:#000;
+}
+.dark-thim{
+    --body-color:#0a0a0a;
+    --font-color:#fff;
+    --footer-bg-color:#000;
+    --icon-color:#fff;
+}
+
 body{
     font-family: 'Oswald', sans-serif;
+    background: var(--body-color);
+    transition:background 0.3s ;
 }
 .navbar-brand img {
 	position: absolute;
@@ -184,7 +200,7 @@ a.a-class{
     border-radius: 15px 30px 30px 15px;
 }
 .footer-section{
-    background-color: #bfbfbf;
+    background-color:var(--footer-bg-color);
     padding: 30px;
 }
 .footer-section .container{
@@ -202,6 +218,10 @@ a.a-class{
    color: black;
    text-decoration: none;
 }
+
+/* **********************************************
+                    Accordion  starts
+************************************************/
 .accordion {
     cursor: pointer;
     padding: 18px;
@@ -222,22 +242,39 @@ a.a-class{
   .active:after {
     content: "\2212";
   }
-  .panel {
+  .accordion{
+	background: white;
+    font-weight: 400;
+}
+.accordion:hover{
+	background: #e9ecef;
+}
+.accordion:hover ~ .panel {
+	max-height: 120px;
+}
+.panel {
     padding: 0 18px;
     background-color: white;
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-  }
-  .panel a:hover{
-    background-color: #f1f1f1;
-  }
-  .panel a{
-      color: black;
-  }
-  .p-2 {
-    display: block;
 }
+.panel:hover{
+    max-height: 120px;
+}
+.panel a:hover{
+    background-color: #f1f1f1;
+}
+.panel a{
+    color: black;
+}
+.p-2 {
+display: block;
+}
+/* **********************************************
+                Accordion  Ends
+************************************************/
+
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
 	color: rgb(255, 255, 255);
 }
@@ -285,3 +322,82 @@ a.a-class{
 .div02 a:nth-child(1) {
 	padding-left: 0 !important;
 }
+/* ****************************************
+        Dark and Lighi Mode starts
+*******************************************/
+#Dark-btn{
+    margin-right: 10px;
+    background-color: #ccc;
+    width: 45px;
+    border-radius: 15px;
+    padding: 2px 3px;
+    cursor: pointer;
+    display: flex;
+    transition: padding-left 0.5s, background-color 0.5s ; 
+    border: 2px solid #ccc;
+}
+#Dark-btn span{
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+}
+#Dark-btn.dark-bnt-on{
+    padding-left: 23px;
+    background-color: black;
+}
+.footer-section .p-address{
+    color: var(--font-color);
+}
+.container h2.font-bold,
+.container .text-hedder.text-center.pt-5.pb-2 p,
+.col-md-4.col-sm-6.col-2 .a-class .main-item p,
+.footer-section p,
+.footer-section a,
+.footer-section .p-address
+{
+    color: var(--font-color);
+}
+.footer-section .div01 a {
+	color: var(--icon-color) !important;
+}
+
+/* Tooltip */
+#Dark-btn{
+    position: relative;
+}
+
+#Dark-btn .tooltip {
+	position: absolute;
+	left: 0px;
+	bottom: -55px;
+	background: black;
+	white-space: nowrap;
+	padding: 5px;
+	border-radius: 4px;
+	opacity: 0;
+	visibility: hidden;
+	transition: .5s;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	width: 100px;
+	height: 28px;
+	padding-bottom: 25px;
+}
+#Dark-btn .tooltip::before {
+	content: " ";
+	position: absolute;
+	border: 10px solid transparent;
+	border-left: 12px solid black;
+	transform: rotate(-90deg);
+	bottom: 25px;
+	left: 11px;
+}
+#Dark-btn:hover .tooltip{
+    opacity:1;
+    visibility:visible;
+}
+/* ****************************************
+        Dark and Lighi Mode ends
+*******************************************/
