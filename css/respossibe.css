@@ -16,6 +16,11 @@
     .section-03 .sec-col-04 img {border-radius: 5px;}
     .section-03 .sec-col-03 img {border-radius: 5px;}
 }
+@media only screen and (max-width:991px){
+    #Dark-btn {margin-bottom: 5px;}
+    #Dark-btn .tooltip::before {border: 11px solid transparent;border-left: 12px solid white;transform: rotate(-181deg);bottom: 4px;left: -18px;}
+    #Dark-btn .tooltip {position: absolute;left: 65px;bottom: -2px;background: white;color: black;}
+}
 @media only screen and (max-width:720px) {
     .bg-02{padding-top: 100px;padding-bottom: 100px;height: 250px;}
     .bg-03{ padding-top: 100px;padding-bottom: 100px;height: 250px;}
