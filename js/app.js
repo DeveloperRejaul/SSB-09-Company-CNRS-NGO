@@ -1,22 +1,47 @@
+// =========== Define variable =================
 
-var acc = document.getElementsByClassName("accordion");
-    var i;
-    
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        } 
-      });
-    }
+const acc = document.querySelector(".accordion");
+const panel = document.querySelector(".panel");
+const dakBtn = document.getElementById("Dark-btn");
 
-var menuBar = document.querySelector('#mobile-menu');
 
-  menuBar.addEventListener("click",function(){
-  var mainMenu = document.querySelector('#main-menu');
-  mainMenu.classList.toggle('active');
+
+// =========== Nav Menu Accordion =================
+acc.addEventListener("mouseover", ()=>{
+  acc.classList.add("active")
 })
+panel.addEventListener("mouseover", ()=>{
+  acc.classList.add("active")
+})
+acc.addEventListener("mouseout", ()=>{
+  acc.classList.remove("active")
+})
+panel.addEventListener("mouseout", ()=>{
+  acc.classList.remove("active")
+})
+
+
+
+// =========== Dark and light Mode =================
+
+dakBtn.onclick = function () {
+  dakBtn.classList.toggle('dark-bnt-on');
+  document.body.classList.toggle('dark-thim');
+
+  if(localStorage.getItem("thime") == "light"){
+    localStorage.setItem("thime", "dark");
+  }else{
+    localStorage.setItem("thime", "light");
+  }
+
+}
+
+if (localStorage.getItem("thime") == "light") {
+  dakBtn.classList.remove('dark-bnt-on');
+  document.body.classList.remove('dark-thim');
+}else if (localStorage.getItem("thime") == "dark") {
+  dakBtn.classList.add('dark-bnt-on');
+  document.body.classList.add('dark-thim');
+}else {
+  localStorage.setItem("thime", "light");
+}
